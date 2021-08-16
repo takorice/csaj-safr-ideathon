@@ -1,0 +1,8 @@
+FROM golang:1.14.4
+
+COPY ./worker /go/src
+WORKDIR /go/src
+
+RUN go build -o /go/main
+
+CMD /go/main
